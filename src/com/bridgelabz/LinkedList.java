@@ -47,5 +47,4 @@ public class  LinkedList<T> {
             head = newNode;
         }
     }
-
 }
