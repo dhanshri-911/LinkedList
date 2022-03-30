@@ -1,4 +1,5 @@
 package com.bridgelabz;
+import java.util.*;
 
 public class  LinkedList<T> {
     Node <T> head;
@@ -23,6 +24,18 @@ public class  LinkedList<T> {
             return;
         }
     }
+
+    public int size() {
+        Node<T> temp=head;
+        int count = 0;
+        while(temp!=null)
+        {
+            temp=temp.next;
+            count++;
+        }
+        return count;
+    }
+
     public void insertAfter(Node <T> previousNode,T data){
         if(previousNode == null){
             System.out.println("previous Node cant be null");
@@ -37,6 +50,13 @@ public class  LinkedList<T> {
             System.out.println("List is empty");
         }
         head = head.next;
+    }
+
+    public void peek() {
+        if (head == null) {
+            return;
+        }
+        System.out.println("top element " +head.data);
     }
     public void add(T data) {
         Node<T> newNode = new Node<T>(data);
@@ -60,7 +80,6 @@ public class  LinkedList<T> {
         }
         return null;
     }
-
     public void popLast() {
         Node <T>  temp = head;
         Node <T> prevNode = null;
