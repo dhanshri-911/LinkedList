@@ -1,23 +1,45 @@
 package com.bridgelabz;
 
 public class  LinkedList<T> {
-    Node <T> head;
-    Node <T> tail;//head
+    Node<T> head;
+    Node<T> tail;//head
 
     public void printList() {
-        Node <T> temp = head;
-        while (temp != null){
-            System.out.println(temp.data+" ");
-            temp=temp.next;
+        Node<T> temp = head;
+        while (temp != null) {
+            System.out.println(temp.data + " ");
+            temp = temp.next;
         }
     }
 
-    public void insertAfter(Node<T> previousNode,T data){
+    void deleteNode(int position) {
+        if (head == null) //empty
+            return;
+        Node temp = head; //store head
+        if (position == 0) {
+            head = temp.next; //change head
+            Node<T> next = temp.next.next;
+            return;
+        }
+        //find privious node
+        for (int i = 0; temp != null && i < position - 1; i++)
+            temp = temp.next;
+        //more than num of nodes
+        if (temp == null || temp.next == null)
+            return;
+        //temp next node to be deleted
+        Node next = temp.next.next;
+        temp.next = next;
+        return;
+    }
+
+
+    public void insertAfter(Node <T> previousNode,T data){
         if(previousNode == null){
             System.out.println("previous Node cant be null");
             return;
         }
-        Node <T> newNode = new Node <T>(data);
+        Node <T> newNode = new Node <T> (data);
         newNode.next = previousNode.next;
         previousNode.next = newNode;
     }
