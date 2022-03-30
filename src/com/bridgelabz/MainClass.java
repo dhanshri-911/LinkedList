@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class MainClass {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList<Integer> list = new LinkedList<>();
         //System.out.println("----------------UC1----------------");
         //list.add(56);
         //list.add(30);
@@ -16,10 +16,19 @@ public class MainClass {
        // list.printList();
 
         System.out.println("----------------UC3----------------");
-        list.add(56);
-        list.add(70);
+        //list.add(56);
+        //list.add(70);
 
+        System.out.println("----------------UC4----------------");
        list.insertAfter(list.head,30);
        list.printList();
+
+        System.out.println("----------------UC5----------------");
+        list.add(56);
+        list.add(30);
+        list.add(70);
+        list.popLast();
+        list.printList();
+
     }
 }
