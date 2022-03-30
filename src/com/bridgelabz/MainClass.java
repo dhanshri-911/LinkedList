@@ -54,6 +54,5 @@ public class MainClass {
         list.deleteNode(2);
         System.out.println("Linked List after delete node");
         list.printList();
-
     }
 }
