@@ -29,9 +29,7 @@ public class MainClass {
         list.add(56);
         list.add(30);
         list.add(70);
-        list.search(30);
-        //list.printList();
-
-
+        list.insertAfter(list.head,30);
+        list.printList();
     }
 }
