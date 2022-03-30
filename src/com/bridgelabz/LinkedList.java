@@ -11,6 +11,7 @@ public class  LinkedList<T> {
             temp=temp.next;
         }
     }
+
     public void insertAfter(Node<T> previousNode,T data){
         if(previousNode == null){
             System.out.println("previous Node cant be null");
@@ -35,6 +36,18 @@ public class  LinkedList<T> {
             tail.next = newNode;
             tail = newNode;
         }
+    }
+
+    public Node search(T data){
+        Node temp = head;
+        while(temp != null){
+            if(temp.data == data) {
+                return temp;
+            }
+            temp = temp.next;
+            System.out.println(data);
+        }
+        return null;
     }
 
     public void popLast() {
