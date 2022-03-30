@@ -1,10 +1,10 @@
 package com.bridgelabz;
 
-public class Node {
-    int data;
+public class Node<T> {
+    T data;
     Node next;
     //create a node
-    Node(int d){
+    Node(T d){
         data =d;
         next = null;
     }

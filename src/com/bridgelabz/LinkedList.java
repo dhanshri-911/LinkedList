@@ -1,28 +1,34 @@
 package com.bridgelabz;
 
-public class LinkedList {
-    Node head;
-    Node tail;//head
+public class  LinkedList<T> {
+    Node <T> head;
+    Node <T> tail;//head
 
     public void printList() {
-        Node temp = head;
+        Node <T> temp = head;
         while (temp != null){
             System.out.println(temp.data+" ");
             temp=temp.next;
         }
     }
 
-    public void insertAfter(Node previousNode,int data){
+    public void insertAfter(Node<T> previousNode,T data){
         if(previousNode == null){
             System.out.println("previous Node cant be null");
             return;
         }
-        Node newNode = new Node(data);
+        Node <T> newNode = new Node <T>(data);
         newNode.next = previousNode.next;
         previousNode.next = newNode;
     }
-    public void add(int data) {
-        Node newNode = new Node(data);
+    public void pop(){
+        if(head == null){
+            System.out.println("List is empty");
+        }
+        head = head.next;
+    }
+    public void add(T data) {
+        Node<T> newNode = new Node<T>(data);
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -31,8 +37,30 @@ public class LinkedList {
             tail = newNode;
         }
     }
-    public void push(int data) {
-        Node newNode = new Node(data);
+
+    public Node search(T data){
+        Node temp = head;
+        while(temp != null){
+            if(temp.data == data) {
+                return temp;
+            }
+            temp = temp.next;
+            System.out.println(data);
+        }
+        return null;
+    }
+
+    public void popLast() {
+        Node <T>  temp = head;
+        Node <T> prevNode = null;
+        while (temp.next != null) {
+            prevNode = temp;
+            temp = temp.next;
+        }
+        prevNode.next = null;
+    }
+    public void push(T data) {
+        Node <T> newNode = new Node<T>(data);
         if (head == null){
             head = newNode;
             tail = newNode;
@@ -43,3 +71,4 @@ public class LinkedList {
         }
     }
 }
+
