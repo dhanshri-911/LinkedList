@@ -9,18 +9,13 @@ public class MainClass {
         //list.add(70);
         //list.printList();
 
-        //System.out.println("----------------UC2----------------");
-        //list.push(70);
-        //list.push(30);
-        //list.push(56);
-       // list.printList();
+        System.out.println("----------------UC2----------------");
+        list.push(70);
+        list.push(30);
+        list.push(56);
+         list.printList();
 
         System.out.println("----------------UC3----------------");
-        //list.add(56);
-        //list.add(70);
-
-        System.out.println("----------------UC4----------------");
-       list.insertAfter(list.head,30);
        list.printList();
 
         System.out.println("----------------UC5----------------");
@@ -29,6 +24,5 @@ public class MainClass {
         list.add(70);
         list.popLast();
         list.printList();
-
     }
 }
