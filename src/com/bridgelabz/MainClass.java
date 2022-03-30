@@ -18,8 +18,7 @@ public class MainClass {
         System.out.println("----------------UC3----------------");
         list.add(56);
         list.add(70);
-
-       list.insertAfter(list.head,30);
-       list.printList();
+        list.insertAfter(list.head,30);
+        list.printList();
     }
 }
