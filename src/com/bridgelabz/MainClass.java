@@ -19,10 +19,19 @@ public class MainClass {
        list.printList();
 
         System.out.println("----------------UC5----------------");
+        //list.add(56);
+        //list.add(30);
+       // list.add(70);
+        //list.popLast();
+        //list.printList();
+
+        System.out.println("----------------UC6----------------");
         list.add(56);
         list.add(30);
         list.add(70);
-        list.popLast();
-        list.printList();
+        list.search(30);
+        //list.printList();
+
+
     }
 }
