@@ -2,7 +2,7 @@ package com.bridgelabz;
 import java.util.*;
 
 public class  LinkedList<T> {
-    Node <T> head;
+    Node<T> head;
     Node <T> tail;//head
     Node <T> element;
 
@@ -13,7 +13,9 @@ public class  LinkedList<T> {
             temp=temp.next;
         }
     }
-
+  public Node <T> peek(){
+        return head;
+  }
     void deleteNode(int position){
         if(head == null) //empty
             return;
