@@ -15,6 +15,9 @@ public class Queue {
         list.printList();
     }
 
+    public void dequeue(){
+        list.popLast();
+    }
     public static void main(String[] args) {
         Queue queue = new Queue();
         System.out.println("-----------UC3-------------");
@@ -22,7 +25,9 @@ public class Queue {
         queue.enqueue(30);
         queue.enqueue(70);
         queue.printQueue();
-
+        System.out.println("-------------UC4-------------");
+        queue.dequeue();
+        queue.printQueue();
     }
 
 }
