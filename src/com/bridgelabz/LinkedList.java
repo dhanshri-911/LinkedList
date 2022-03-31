@@ -5,6 +5,7 @@ public class  LinkedList<T> {
     Node<T> head;
     Node <T> tail;//head
     Node <T> element;
+    int size;
 
     public void printList() {
         Node <T> temp = head;
@@ -28,6 +29,19 @@ public class  LinkedList<T> {
         }
     }
 
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        newNode.data = data;
+        newNode.next = null;
+        if (size == 0) {
+            head = tail = newNode;
+        }
+        else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
     public int size() {
         Node<T> temp=head;
         int count = 0;
