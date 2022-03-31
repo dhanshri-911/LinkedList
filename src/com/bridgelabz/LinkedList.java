@@ -4,6 +4,7 @@ import java.util.*;
 public class  LinkedList<T> {
     Node <T> head;
     Node <T> tail;//head
+    Node <T> element;
 
     public void printList() {
         Node <T> temp = head;
@@ -52,14 +53,8 @@ public class  LinkedList<T> {
         head = head.next;
     }
 
-    public void peek() {
-        if (head == null) {
-            return;
-        }
-        System.out.println("top element " +head.data);
-    }
-    public void add(T data) {
-        Node<T> newNode = new Node<T>(data);
+    public void add(int data) {
+        Node newNode = new Node (data);
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -97,8 +92,9 @@ public class  LinkedList<T> {
         }
         else {
             newNode.next = head;
+        }
             head = newNode;
         }
     }
-}
+
 
