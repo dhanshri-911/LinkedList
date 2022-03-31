@@ -7,6 +7,7 @@ public class  LinkedList<T> {
     Node <T> element;
     int size;
 
+
     public void printList() {
         Node <T> temp = head;
         while (temp != null){
